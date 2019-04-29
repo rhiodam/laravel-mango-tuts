@@ -13,8 +13,9 @@ class CreateTeleponsTable extends Migration
      */
     public function up()
     {
-        Schema::create('telepons', function (Blueprint $table) {
+        Schema::create('telepon', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('nomor_telepon');
             $table->timestamps();
         });
     }

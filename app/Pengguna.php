@@ -11,6 +11,6 @@ class Pengguna extends Model
 
     public function telepon()
     {
-        return $this->belongsTo('App\Telepon');
+        return $this->hasOne('App\Telepon');
     }
 }

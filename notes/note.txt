@@ -1,0 +1,28 @@
+
+
+C:\xampp\htdocs\Github\tuts\laravel\laravel-mango-tuts>php artisan make:model Pengguna - mcr
+
+
+  Too many arguments, expected arguments "command" "name".
+
+
+
+C:\xampp\htdocs\Github\tuts\laravel\laravel-mango-tuts>php artisan make:model Pengguna -mcr
+Model created successfully.
+Created Migration: 2019_04_29_103719_create_penggunas_table
+Controller created successfully.
+
+C:\xampp\htdocs\Github\tuts\laravel\laravel-mango-tuts>php artisan make:model Telepon -mcr
+Model created successfully.
+Created Migration: 2019_04_29_103849_create_telepons_table
+Controller created successfully.
+
+C:\xampp\htdocs\Github\tuts\laravel\laravel-mango-tuts>php artisan make:seeder PenggunaSeeder
+Seeder created successfully.
+
+C:\xampp\htdocs\Github\tuts\laravel\laravel-mango-tuts>php artisan make:seeder TeleponSeeder
+Seeder created successfully.
+
+
+
+

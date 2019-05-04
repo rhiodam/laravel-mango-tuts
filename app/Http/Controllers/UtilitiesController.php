@@ -35,5 +35,11 @@ class UtilitiesController extends Controller
         echo "<br/>";
         echo "Pekerjaan : " . $data['pekerjaan'];
     }
+    
+    public function hash(){
+        $password = 'secret';
+        $hash_password_saya = Hash::make($password);
+        echo $hash_password_saya;
+    }
 
 }

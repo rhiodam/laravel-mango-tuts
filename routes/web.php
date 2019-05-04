@@ -32,5 +32,7 @@ Route::get('/enkripsi/', 'UtilitiesController@enkripsi');
 Route::get('/data/', 'UtilitiesController@data');
 Route::get('/data/{data_rahasia}', 'UtilitiesController@data_proses');
 
+Route::get('/hash', 'UtilitiesController@hash');
+
 
 Route::get('/artikel', 'WebController@index');

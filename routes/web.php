@@ -30,7 +30,7 @@ Route::resource('pengguna','PenggunaController');
 
 Route::resource('anggota','AnggotaController');
 
-Route::resource('artikel','WebController');
+Route::resource('artikel','ArtikelController');
 
 
 Route::resource('guru','GuruController');
@@ -48,7 +48,8 @@ Route::get('/data/{data_rahasia}', 'UtilitiesController@data_proses');
 Route::get('/hash', 'UtilitiesController@hash');
 
 
-Route::get('/artikel', 'WebController@index');
+//Route::get('/artikel', 'WebController@index');
+//Route::get('/artikel', 'ArtikelController@index');
 
 Route::get('/upload', 'UploadController@upload');
 Route::post('/upload/proses', 'UploadController@proses_upload');

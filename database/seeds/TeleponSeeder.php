@@ -1,5 +1,6 @@
 <?php
 
+use Faker\Factory as Faker;
 use Illuminate\Database\Seeder;
 
 class TeleponSeeder extends Seeder

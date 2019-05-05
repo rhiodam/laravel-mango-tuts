@@ -20,7 +20,7 @@ class PenggunaSeeder extends Seeder
         for ($i = 1; $i <= 5000; $i++) {
 
             // insert data ke table pegawai menggunakan Faker
-            DB::table('customers')->insert([
+            DB::table('pengguna')->insert([
 //                'firstname' => $faker->firstName($gender = null|'male'|'female'),
                 'CustomerName' => $faker->firstName($gender) . ' ' . $faker->lastName($gender),
 //                'lastname' => $faker->lastName($gender),

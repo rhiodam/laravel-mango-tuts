@@ -8,7 +8,7 @@ class UploadController extends Controller
 {
     //
     public function upload(){
-        return view('upload');
+        return view('upload.index');
     }
 
     public function proses_upload(Request $request){

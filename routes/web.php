@@ -32,6 +32,11 @@ Route::resource('anggota','AnggotaController');
 
 Route::resource('artikel','ArtikelController');
 
+Route::resource('gambar','GambarController');
+
+Route::get('gambar/upload', 'GambarController@upload');
+Route::post('gambar/upload/proses', 'GambarController@proses_upload');
+
 
 Route::resource('guru','GuruController');
 Route::get('/guru/hapus/{id}', 'GuruController@hapus');

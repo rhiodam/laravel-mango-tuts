@@ -65,3 +65,8 @@ Route::post('/upload/proses', 'UploadController@proses_upload');
 Route::get('/session/tampil','SessiontestController@tampilkanSession');
 Route::get('/session/buat','SessiontestController@buatSession');
 Route::get('/session/hapus','SessiontestController@hapusSession');
+
+Route::get('/pesan','NotifController@index');
+Route::get('/pesan/sukses','NotifController@sukses');
+Route::get('/pesan/peringatan','NotifController@peringatan');
+Route::get('/pesan/gagal','NotifController@gagal');

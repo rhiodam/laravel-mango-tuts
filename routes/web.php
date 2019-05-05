@@ -73,3 +73,5 @@ Route::get('/pesan/gagal','NotifController@gagal');
 
 
 Route::get('/userr','UserrController@index');
+
+Route::get('/sendemail','TestController@index');

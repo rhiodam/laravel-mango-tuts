@@ -32,6 +32,8 @@ Route::resource('anggota','AnggotaController');
 
 Route::resource('artikel','ArtikelController');
 
+Route::resource('sessiontest','SessiontestController');
+
 Route::resource('gambar','GambarController');
 
 Route::get('gambar/upload', 'GambarController@upload');
@@ -59,3 +61,7 @@ Route::get('/hash', 'UtilitiesController@hash');
 
 Route::get('/upload', 'UploadController@upload');
 Route::post('/upload/proses', 'UploadController@proses_upload');
+
+Route::get('/session/tampil','SessiontestController@tampilkanSession');
+Route::get('/session/buat','SessiontestController@buatSession');
+Route::get('/session/hapus','SessiontestController@hapusSession');

@@ -36,6 +36,7 @@ Route::resource('gambar','GambarController');
 
 Route::get('gambar/upload', 'GambarController@upload');
 Route::post('gambar/upload/proses', 'GambarController@proses_upload');
+Route::get('gambar/upload/hapus/{id}', 'GambarController@hapus');
 
 
 Route::resource('guru','GuruController');

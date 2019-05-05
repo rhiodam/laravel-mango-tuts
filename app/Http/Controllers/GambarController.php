@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Gambar;
 use Illuminate\Http\Request;
+//use Illuminate\Support\Facades\File;
+use File;
 
 class GambarController extends Controller
 {
@@ -84,6 +86,7 @@ class GambarController extends Controller
     {
         //
     }
+
     public function upload(){
         $gambar = Gambar::get();
         return view('gambar.index',['gambar' => $gambar]);
@@ -108,6 +111,17 @@ class GambarController extends Controller
             'file' => $nama_file,
             'keterangan' => $request->keterangan,
         ]);
+
+        return redirect()->back();
+    }
+
+    public function hapus($id){
+        // hapus file
+        $gambar = Gambar::where('id',$id)->first();
+        File::delete('data_file/'.$gambar->file);
+
+        // hapus data
+        Gambar::where('id',$id)->delete();
 
         return redirect()->back();
     }

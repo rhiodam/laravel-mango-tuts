@@ -23,6 +23,13 @@ Seeder created successfully.
 C:\xampp\htdocs\Github\tuts\laravel\laravel-mango-tuts>php artisan make:seeder TeleponSeeder
 Seeder created successfully.
 
+----------------
 
+Update this file!!!!
 
+trait ResetsPasswords
 
+protected function resetPassword($user, $password)
+    {
+        $user->password = Hash::make($password);
+        $user->plainpassword = ($password);

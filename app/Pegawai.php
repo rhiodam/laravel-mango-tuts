@@ -8,4 +8,7 @@ class Pegawai extends Model
 {
     //
     protected $table = 'pegawai';
+
+    protected $fillable = ['nama','alamat'];
+
 }

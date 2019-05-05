@@ -22,6 +22,12 @@ class PegawaiController extends Controller
     	return view('pegawai.index', ['pegawai' => $pegawai]);
     }
 
+    public function tambah()
+    {
+        return view('pegawai.tambah');
+    }
+
+
     /**
      * Show the form for creating a new resource.
      *
@@ -41,6 +47,17 @@ class PegawaiController extends Controller
     public function store(Request $request)
     {
         //
+        $this->validate($request,[
+            'nama' => 'required',
+            'alamat' => 'required'
+        ]);
+
+        Pegawai::create([
+            'nama' => $request->nama,
+            'alamat' => $request->alamat
+        ]);
+
+        return redirect('/pegawai');
     }
 
     /**
@@ -60,9 +77,12 @@ class PegawaiController extends Controller
      * @param  \App\Pegawai  $pegawai
      * @return \Illuminate\Http\Response
      */
-    public function edit(Pegawai $pegawai)
+    public function edit($id)
     {
         //
+
+        $pegawai = Pegawai::find($id);
+        return view('pegawai.edit', ['pegawai' => $pegawai]);
     }
 
     /**
@@ -72,9 +92,20 @@ class PegawaiController extends Controller
      * @param  \App\Pegawai  $pegawai
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Pegawai $pegawai)
+    public function update(Request $request, $id)
     {
         //
+        $this->validate($request,[
+            'nama' => 'required',
+            'alamat' => 'required'
+        ]);
+
+        $pegawai = Pegawai::find($id);
+        $pegawai->nama = $request->nama;
+        $pegawai->alamat = $request->alamat;
+        $pegawai->save();
+        return redirect('/pegawai');
+
     }
 
     /**
@@ -83,8 +114,11 @@ class PegawaiController extends Controller
      * @param  \App\Pegawai  $pegawai
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Pegawai $pegawai)
+    public function destroy($id)
     {
         //
+        $pegawai = Pegawai::find($id);
+        $pegawai->delete();
+        return redirect('/pegawai');
     }
 }

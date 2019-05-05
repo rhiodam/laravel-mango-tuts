@@ -56,4 +56,7 @@ Route::post('/upload/proses', 'UploadController@proses_upload');
 
 Auth::routes();
 
+//verifikasi email user
+Auth::routes(['verify' => true]);
+
 Route::get('/home', 'HomeController@index')->name('home');

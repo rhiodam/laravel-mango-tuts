@@ -53,3 +53,7 @@ Route::get('/hash', 'UtilitiesController@hash');
 
 Route::get('/upload', 'UploadController@upload');
 Route::post('/upload/proses', 'UploadController@proses_upload');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

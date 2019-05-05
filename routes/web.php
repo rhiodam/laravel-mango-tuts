@@ -20,6 +20,9 @@ Route::get('/pegawai', 'PegawaiController@index');
 //Route::resource('pegawai','PegawaiController');
 
 Route::resource('pengguna','PenggunaController');
+
+Route::resource('anggota','AnggotaController');
+
 Route::resource('artikel','WebController');
 
 
@@ -36,3 +39,6 @@ Route::get('/hash', 'UtilitiesController@hash');
 
 
 Route::get('/artikel', 'WebController@index');
+
+Route::get('/upload', 'UploadController@upload');
+Route::post('/upload/proses', 'UploadController@proses_upload');

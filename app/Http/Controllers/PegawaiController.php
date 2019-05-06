@@ -3,10 +3,21 @@
 namespace App\Http\Controllers;
 
 use App\Pegawai;
+//use Barryvdh\DomPDF\PDF;
+use Barryvdh\DomPDF\Facade as PDF;
+//use PDF;
 use Illuminate\Http\Request;
 
 class PegawaiController extends Controller
 {
+    public function cetak_pdf()
+    {
+        $pegawai = Pegawai::all();
+
+        $pdf = PDF::loadview('pegawai.pegawai_pdf',['pegawai'=>$pegawai]);
+        return $pdf->download('laporan-pegawai-pdf');
+    }
+
     /**
      * Display a listing of the resource.
      *

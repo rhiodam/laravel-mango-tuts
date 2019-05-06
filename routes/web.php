@@ -22,6 +22,7 @@ Route::get('/pegawai/edit/{id}', 'PegawaiController@edit');
 Route::put('/pegawai/update/{id}', 'PegawaiController@update');
 Route::get('/pegawai/hapus/{id}', 'PegawaiController@delete');
 
+Route::get('/pegawai/cetak_pdf', 'PegawaiController@cetak_pdf');
 
 
 Route::resource('pegawai','PegawaiController');
@@ -31,6 +32,8 @@ Route::resource('pengguna','PenggunaController');
 Route::resource('anggota','AnggotaController');
 
 Route::resource('artikel','ArtikelController');
+
+Route::resource('siswa','SiswaController');
 
 Route::resource('sessiontest','SessiontestController');
 
@@ -72,6 +75,9 @@ Route::get('/pesan/peringatan','NotifController@peringatan');
 Route::get('/pesan/gagal','NotifController@gagal');
 
 
-Route::get('/userr','UserrController@index');
+//Route::get('/userr','UserrController@index');
 
 Route::get('/sendemail','TestController@index');
+
+Route::get('/siswa', 'SiswaController@index');
+Route::get('/siswa/export_excel', 'SiswaController@export_excel');

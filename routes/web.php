@@ -81,3 +81,6 @@ Route::get('/sendemail','TestController@index');
 
 Route::get('/siswa', 'SiswaController@index');
 Route::get('/siswa/export_excel', 'SiswaController@export_excel');
+Route::post('/siswa/import_excel', 'SiswaController@import_excel');
+
+

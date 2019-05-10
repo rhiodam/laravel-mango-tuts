@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('country');
             $table->string('pincode');
             $table->string('mobile');
+            $table->string('role');// the role column
             $table->string('email')->unique();
             $table->string('password');
             $table->timestamp('email_verified_at')->nullable();

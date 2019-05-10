@@ -84,3 +84,7 @@ Route::get('/siswa/export_excel', 'SiswaController@export_excel');
 Route::post('/siswa/import_excel', 'SiswaController@import_excel');
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -29,6 +29,10 @@ class CreateUsersTable extends Migration
             $table->string('admin');
             $table->string('status');
             $table->string('gender');
+
+//            for linkedin
+            $table->string('provider');
+            $table->string('provider_id');
             $table->rememberToken();
             $table->timestamps();
         });
